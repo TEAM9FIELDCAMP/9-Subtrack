@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SUBTRACK</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* WRAPPER */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HERO FULL */
+.hero {
+    flex: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+
+    background:
+    radial-gradient(circle at center, rgba(255,0,0,0.2), transparent),
+    linear-gradient(rgba(20,0,10,0.7), rgba(60,0,20,0.95)),
+    url("COVER.png") center/cover no-repeat;
+}
+
+/* LOGO ATAS */
+.top-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.top-logos img {
+    height: 40px;
+}
+
+/* KONTEN HERO */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    padding: 50px 80px;     
+}
+
+/* KIRI */
+.hero-text {
+    max-width: 700px;
+    position: relative;
+    top: -50px; /* ⬅️ ini aman, cuma teks yang naik */
+}
+
+.hero-text h4 {
+    color: #ffb3b3;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    line-height: 1.3;
+}
+
+.hero-text p {
+    margin-top: 10px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, #ff4b5c, #ff7a7a);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 80, 80, 0.4);
+}
+
+/* HOVER */
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 80, 80, 0.8);
+}
+
+/* CLICK EFFECT */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* KANAN */
+.hero-img img {
+    width: 350px;
+}
+
+/* ========================= */
+/* CINEMATIC HERO */
+/* ========================= */
+
+/* TEXT GLOW */
+.hero-text h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    text-shadow: 0 0 20px rgba(255, 80, 80, 0.5);
+}
+
+/* FLOATING LOGO */
+.hero-img img {
+    width: 350px;
+    animation: floating 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(255, 80, 80, 0.6));
+}
+
+/* ANIMASI NAIK TURUN HALUS */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ========================= */
+/* ANIMASI MASUK */
+/* ========================= */
+
+.hero-text {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.hero-img {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeRight 1.2s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+    background: linear-gradient(135deg, #2b0013, #660f24);
+    color: white;
+    padding: 40px 40px 20px;
+    margin-top: 5px;
+}
+
+/* GRID FOOTER */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* KOLOM */
+.footer-col {
+    min-width: 180px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-col a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+/* SUBSCRIBE */
+.subscribe-box {
+    display: flex;
+    margin-top: 10px;
+}
+
+.subscribe-box input {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    width: 180px;
+}
+
+.subscribe-box button {
+    padding: 6px 12px;
+    border: none;
+    background: orange;
+    color: black;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+/* SOCIAL */
+.footer-social {
+    margin-top: 15px;
+}
+
+.footer-social i {
+    margin-right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+
+        <!-- LOGO ATAS -->
+        <div class="top-logos">
+            <img src="ITSS.png">
+            <img src="GM.png">
+            <img src="G25.png">
+        </div>
+
+        <!-- ISI -->
+        <div class="hero-content">
+
+            <div class="hero-text">
+                <h1>
+                    Pemetaan Land Subsidence <br>
+                    Kelurahan Tanjung Perak, Surabaya
+                </h1>
+
+                <p>Analisis berbasis InSAR untuk mitigasi banjir</p>
+
+                <a href="beranda.html" class="btn">Eksplor</a>
+            </div>
+
+            <div class="hero-img">
+                <img src="subtrack.png">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+
+    <div class="footer-container">
+
+        <!-- KOLOM 1 -->
+        <div class="footer-col">
+            <h4>Menu</h4>
+            <a href="#">Beranda</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">WebGIS</a>
+            <a href="#">Tim</a>
+        </div>
+
+        <!-- KOLOM 2 -->
+        <div class="footer-col">
+            <h4>Project</h4>
+            <a href="#">Land Subsidence</a>
+            <a href="#">Analisis InSAR</a>
+            <a href="#">Peta Digital</a>
+            <a href="#">Mitigasi Banjir</a>
+        </div>
+
+        <!-- KOLOM 3 -->
+        <div class="footer-col">
+            <h4>Informasi</h4>
+            <a href="#">ITS Geomatika</a>
+            <a href="#">Field Camp 2026</a>
+            <a href="#">Kontak</a>
+        </div>
+
+        <!-- KOLOM 4 (SUBSCRIBE) -->
+        <div class="footer-col">
+            <h4>Subscribe</h4>
+            <p>Dapatkan update terbaru dari kami</p>
+
+            <div class="subscribe-box">
+                <input type="email" placeholder="Email kamu">
+                <button>Join</button>
+            </div>
+
+            <div class="footer-social">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        <div>© 2026 SUBTRACK - ITS Geomatika</div>
+        <div>
+            Privacy Policy | Terms of Service
+        </div>
+    </div>
+
+</footer>
+
+</body>
+</html>
